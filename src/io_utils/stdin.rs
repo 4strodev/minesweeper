@@ -6,9 +6,9 @@ pub struct Prompt<'a> {
 
 impl Prompt<'_> {
     pub fn new(symbol: &str) -> Prompt {
-        return Prompt{
-            prompt_symbol: symbol
-        }
+        return Prompt {
+            prompt_symbol: symbol,
+        };
     }
 
     pub fn input_as<T: std::str::FromStr>(&self, message: &str) -> T

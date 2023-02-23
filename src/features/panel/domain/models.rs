@@ -1,7 +1,7 @@
+use super::errors::OutOfBoundariesError;
+use crate::features::mine::domain::models::MineBox;
 use std::fmt::Display;
 use std::result::Result;
-use crate::features::mine::domain::models::MineBox;
-use super::errors::OutOfBoundariesError;
 
 #[derive(Debug)]
 pub struct MineBoxPanel {
@@ -44,10 +44,7 @@ impl MineBoxPanel {
         return panel_string;
     }
 
-    pub fn mark_mine(
-        &self,
-        position: MineBoxPanelPosition,
-    ) -> Result<(), OutOfBoundariesError> {
+    pub fn mark_mine(&self, position: MineBoxPanelPosition) -> Result<(), OutOfBoundariesError> {
         if self.size < position.longitude.into() || self.size < position.latitude.into() {
             return Result::Err(OutOfBoundariesError::new());
         }

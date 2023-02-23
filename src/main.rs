@@ -1,9 +1,7 @@
 mod features;
 mod io_utils;
-
-use io_utils::stdin::Prompt;
-
 use crate::features::panel::domain::models::MineBoxPanel;
+use io_utils::stdin::Prompt;
 
 const MAIN_MENU: &str = "Bienvenido al buscaminas:
 1: Jugar
