@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "mines-find"
+name = "minesweeper"
 version = "0.1.0"
