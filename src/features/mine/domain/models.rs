@@ -39,6 +39,8 @@ impl MineBox {
 
         return value;
     }
+
+    // TODO add mark method
 }
 
 impl Display for MineBox {
